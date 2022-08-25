@@ -6,7 +6,7 @@ app.use(express.json());
 app.use(cors());
 const port = process.env.PORT || 8000;
 const db = require("./models");
-
+require("dotenv").config();
 // Routers
 const postRouter = require("./routes/Posts");
 app.use("/posts", postRouter);
